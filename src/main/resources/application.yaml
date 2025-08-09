@@ -29,6 +29,11 @@ spring:
           basedir: file:///${user.home}/config-repo # Explicit cache location
 
 
+encrypt:
+  key: ${CONFIG_ENCRYPT_KEY} # from environment variable
+  enabled: true
+
+
 management:
   endpoints:
     web:
