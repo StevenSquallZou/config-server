@@ -22,7 +22,8 @@ spring:
           uri: https://github.com/StevenSquallZou/config-sandbox # the repo which contains configuration files
           search-paths:
             - '{application}' # {application} = Client's spring.application.name
-            - 'redis' # other sub dir
+            - redis # other sub dir
+            - datasource
           clone-on-start: true
           default-label: main # git branch to use
           force-pull: true # Forces fresh clone on startup
