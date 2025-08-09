@@ -1,0 +1,41 @@
+#debug: true
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%logger{36}] %msg%n"
+  level:
+    root: INFO
+    demo: DEBUG
+
+
+server:
+  port: 8888
+
+
+spring:
+  application:
+    name: config-server-sandbox
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/StevenSquallZou/config-sandbox # the repo which contains configuration files
+          search-paths:
+            - '{application}' # {application} = Client's spring.application.name
+            - 'redis' # other sub dir
+          clone-on-start: true
+          default-label: main # git branch to use
+          force-pull: true # Forces fresh clone on startup
+          basedir: file:///${user.home}/config-repo # Explicit cache location
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,env,configprops,git
+  endpoint:
+    health:
+      show-details: always
+    git:
+      enabled: true
