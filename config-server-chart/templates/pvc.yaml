@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: config-sandbox-repo-pvc
 spec:
-  storageClassName: config-sandbox-repo-storage
+  volumeName: config-sandbox-repo-hostpath-pv
   accessModes:
     - ReadWriteOnce
   resources:
