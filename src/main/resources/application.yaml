@@ -42,7 +42,7 @@ spring:
             default-label: main # git branch to use
             clone-on-start: true
             fail-fast: false
-            force-pull: true # force pull from the remote repository if the local copy is dirty
+            force-pull: false # true: force pull from the remote repository if the local copy is dirty, delete-and-reclone
             basedir: file:///opt/config-sandbox # Explicit cache location
             order: 2
 
