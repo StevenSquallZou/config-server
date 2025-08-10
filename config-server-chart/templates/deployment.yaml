@@ -28,6 +28,10 @@ spec:
         {{- toYaml . | nindent 8 }}
         {{- end }}
     spec:
+      hostAliases:
+        - ip: "140.82.112.4"
+          hostnames:
+            - "github.com"
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
