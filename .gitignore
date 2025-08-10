@@ -1,2 +1,4 @@
 target/
 *.iml
+image/
+/config-server-chart/templates/secret.yaml
