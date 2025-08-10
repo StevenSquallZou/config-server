@@ -20,11 +20,11 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 public class ConfigServerApplication {
 
     public static void main(String[] args) {
-        log.info("main -> starting ConfigServerApplication...");
+        log.debug("main -> starting ConfigServerApplication...");
 
         SpringApplication.run(ConfigServerApplication.class, args);
 
-        log.info("main -> started ConfigServerApplication");
+        log.debug("main -> started ConfigServerApplication");
     }
 
 /*
