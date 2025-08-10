@@ -24,6 +24,9 @@ spring:
   cloud:
     config:
       server:
+        health:
+          enabled: false
+
         composite:
           - type: jdbc
             sql: "SELECT prop_key, prop_value FROM common.server_config WHERE application = ? AND profile = ? AND label = ?"
@@ -38,7 +41,7 @@ spring:
               - datasource
             clone-on-start: true
             default-label: main # git branch to use
-            force-pull: true # Forces fresh clone on startup
+            force-pull: true # force pull from the remote repository if the local copy is dirty
             basedir: file:///${user.home}/config-repo # Explicit cache location
             order: 2
 
@@ -58,9 +61,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,env,configprops,git
+        include: health
   endpoint:
     health:
       show-details: always
-    git:
-      enabled: true
