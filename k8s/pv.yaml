@@ -3,7 +3,6 @@ kind: PersistentVolume
 metadata:
   name: config-sandbox-repo-hostpath-pv
 spec:
-  storageClassName: config-sandbox-repo-storage
   capacity:
     storage: 10Mi
   accessModes:
