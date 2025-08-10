@@ -138,7 +138,7 @@ volumes:
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts:
   - name: config-sandbox-repo
-    mountPath: /tmp/config-sandbox
+    mountPath: /opt/config-sandbox
     readOnly: false
 
 nodeSelector: {}
