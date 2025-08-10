@@ -1,0 +1,16 @@
+#!/bin/ksh
+
+APP_NAME=config-server
+APP_VERSION=v1.0.0
+APP_FULL_NAME=${APP_NAME}:${APP_VERSION}
+
+ROOT_DIR=/opt/${APP_NAME}
+IMAGE_DIR=${ROOT_DIR}/image
+IMAGE_NAME=${APP_NAME}-${APP_VERSION}.tar
+CHART_DIR=${ROOT_DIR}/${APP_NAME}-chart
+RELEASE_NAME=${APP_NAME}-release
+
+# create IMAGE_DIR if it doesn't exist
+if [ ! -d "${IMAGE_DIR}" ]; then
+    mkdir -m 775 -p "${IMAGE_DIR}"
+fi
