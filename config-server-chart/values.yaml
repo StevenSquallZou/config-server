@@ -131,13 +131,13 @@ autoscaling:
 
 # Additional volumes on the output Deployment definition.
 volumes:
-  - name: config-sandbox-repo
+  - name: config-sandbox-repo-volume
     persistentVolumeClaim:
       claimName: config-sandbox-repo-pvc
 
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts:
-  - name: config-sandbox-repo
+  - name: config-sandbox-repo-volume
     mountPath: /opt/config-sandbox
     readOnly: false
 
