@@ -159,30 +159,8 @@ tolerations: []
 affinity: {}
 
 config:
-  # App Configuration
-  app:
-    hostname: "config-server.com"
-    port: 30080
-
-  configServer:
-    hostname: "config-server.com"
-    port: 30088
-
-
   # Database Configuration
   jdbc:
     baseUrl: "jdbc:mysql://192.168.150.130:3306"
     usernames:
       app: "app"
-      world: "world_admin"
-      sakila: "sakila_admin"
-    passwords:
-      app: "MTIz"
-      world: "MTIz"
-      sakila: "MTIz"
-
-  # Redis Configuration
-  redis:
-    host: "192.168.150.130"
-    port: "6379"
-    password: "MTIz"

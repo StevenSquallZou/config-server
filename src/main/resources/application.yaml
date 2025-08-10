@@ -30,6 +30,7 @@ spring:
             default-label: main # label = 'main' will be used automatically
             order: 1 # 1 has higher order than 2
           - type: git
+            skip-ssl-validation: true
             uri: https://github.com/StevenSquallZou/config-sandbox # the repo which contains configuration files
             search-paths:
               - '{application}' # {application} = Client's spring.application.name
