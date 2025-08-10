@@ -32,6 +32,107 @@ spec:
         - ip: "140.82.112.4"
           hostnames:
             - "github.com"
+        - ip: "20.205.243.166"
+          hostnames:
+            - "github.com"
+            - "gist.github.com"
+        - ip: "151.101.1.6"
+          hostnames:
+            - "github.global.ssl.fastly.net"
+        - ip: "151.101.65.6"
+          hostnames:
+            - "github.global.ssl.fastly.net"
+        - ip: "151.101.129.6"
+          hostnames:
+            - "github.global.ssl.fastly.net"
+        - ip: "151.101.193.6"
+          hostnames:
+            - "github.global.ssl.fastly.net"
+        - ip: "199.232.69.194"
+          hostnames:
+            - "github.global.ssl.fastly.net"
+        - ip: "151.101.77.194"
+          hostnames:
+            - "github.global.ssl.fastly.net"
+        - ip: "185.199.108.153"
+          hostnames:
+            - "assets-cdn.github.com"
+            - "github.githubassets.com"
+        - ip: "185.199.108.133"
+          hostnames:
+            - "raw.githubusercontent.com"
+            - "github.map.fastly.net"
+            - "media.githubusercontent.com"
+        - ip: "185.199.110.133"
+          hostnames:
+            - "camo.githubusercontent.com"
+            - "raw.githubusercontent.com"
+            - "favicons.githubusercontent.com"
+            - "avatars.githubusercontent.com"
+        - ip: "185.199.111.133"
+          hostnames:
+            - "user-images.githubusercontent.com"
+            - "avatars4.githubusercontent.com"
+            - "avatars1.githubusercontent.com"
+        - ip: "185.199.108.133"
+          hostnames:
+            - "avatars5.githubusercontent.com"
+            - "avatars3.githubusercontent.com"
+            - "avatars0.githubusercontent.com"
+        - ip: "185.199.109.133"
+          hostnames:
+            - "desktop.githubusercontent.com"
+            - "avatars2.githubusercontent.com"
+        - ip: "185.199.111.153"
+          hostnames:
+            - "github.io"
+            - "githubstatus.com"
+        - ip: "140.82.112.25"
+          hostnames:
+            - "alive.github.com"
+        - ip: "140.82.113.26"
+          hostnames:
+            - "live.github.com"
+        - ip: "140.82.113.22"
+          hostnames:
+            - "central.github.com"
+        - ip: "192.0.66.2"
+          hostnames:
+            - "github.blog"
+        - ip: "20.205.243.168"
+          hostnames:
+            - "api.github.com"
+        - ip: "20.205.243.165"
+          hostnames:
+            - "codeload.github.com"
+        - ip: "3.5.27.215"
+          hostnames:
+            - "github-cloud.s3.amazonaws.com"
+        - ip: "3.5.0.155"
+          hostnames:
+            - "github-com.s3.amazonaws.com"
+            - "github-production-user-asset-6210df.s3.amazonaws.com"
+        - ip: "52.216.236.59"
+          hostnames:
+            - "github-production-release-asset-2e65be.s3.amazonaws.com"
+        - ip: "3.5.9.21"
+          hostnames:
+            - "github-production-repository-file-5c1aeb.s3.amazonaws.com"
+        - ip: "140.82.112.17"
+          hostnames:
+            - "github.community"
+        - ip: "20.43.185.14"
+          hostnames:
+            - "github.dev"
+        - ip: "140.82.112.21"
+          hostnames:
+            - "collector.github.com"
+        - ip: "13.107.42.16"
+          hostnames:
+            - "pipelines.actions.githubusercontent.com"
+        - ip: "185.199.109.133"
+          hostnames:
+            - "objects.githubusercontent.com"
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
