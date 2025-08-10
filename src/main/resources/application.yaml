@@ -39,10 +39,11 @@ spring:
               - '{application}' # {application} = Client's spring.application.name
               - redis # other sub dir
               - datasource
-            clone-on-start: true
             default-label: main # git branch to use
+            clone-on-start: true
+            fail-fast: false
             force-pull: true # force pull from the remote repository if the local copy is dirty
-            basedir: file:///${user.home}/config-repo # Explicit cache location
+            basedir: file:///opt/config-sandbox # Explicit cache location
             order: 2
 
   datasource:

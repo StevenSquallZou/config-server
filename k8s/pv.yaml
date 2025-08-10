@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: config-sandbox-repo-hostPath-pv
+spec:
+  storageClassName: config-sandbox-repo-storage
+  capacity:
+    storage: 10Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /opt/config-sandbox
+    type: DirectoryOrCreate

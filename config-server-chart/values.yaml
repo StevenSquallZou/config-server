@@ -130,17 +130,16 @@ autoscaling:
           periodSeconds: 10
 
 # Additional volumes on the output Deployment definition.
-volumes: []
-# - name: foo
-#   secret:
-#     secretName: mysecret
-#     optional: false
+volumes:
+  - name: config-sandbox-repo
+    persistentVolumeClaim:
+      claimName: config-sandbox-repo-pvc
 
 # Additional volumeMounts on the output Deployment definition.
-volumeMounts: []
-# - name: foo
-#   mountPath: "/etc/foo"
-#   readOnly: true
+volumeMounts:
+  - name: config-sandbox-repo
+    mountPath: /tmp/config-sandbox
+    readOnly: false
 
 nodeSelector: {}
 

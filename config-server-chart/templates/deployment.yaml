@@ -133,6 +133,7 @@ spec:
         - ip: "185.199.109.133"
           hostnames:
             - "objects.githubusercontent.com"
+
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
