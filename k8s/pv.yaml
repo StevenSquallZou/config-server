@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: config-sandbox-repo-hostPath-pv
+  name: config-sandbox-repo-hostpath-pv
 spec:
   storageClassName: config-sandbox-repo-storage
   capacity:
